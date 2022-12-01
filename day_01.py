@@ -14,9 +14,11 @@ def main():
     calories = get_input()
     
     print(
-        max(
-            [sum(x) for x in calories]
-        )
+        sum(
+            sorted(
+                [sum(x) for x in calories], reverse=True
+            )[0:3]
+        )           
     )
 
 
