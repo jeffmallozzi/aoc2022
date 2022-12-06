@@ -24,8 +24,8 @@ def main():
 
         for move in f:
             _, count, _, start, _, finish = move.strip().split()
-            for _ in range(int(count)):
-                crates[int(finish)].append(crates[int(start)].pop(-1))
+            crates[int(finish)].extend(crates[int(start)][-int(count):])
+            crates[int(start)] = crates[int(start)][:-int(count)]
 
 
     for stack, crate in crates.items():
