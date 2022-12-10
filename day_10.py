@@ -12,9 +12,6 @@ def main():
             elif line[0] == "noop":
                 cycles.append(0)
 
-
-    print(cycles)
-
     interesting_signals = [20, 60, 100, 140, 180, 220]
     
     print("Part 1: ", sum(
